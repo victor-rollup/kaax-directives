@@ -1,7 +1,7 @@
 import type { Directive, DirectiveBinding } from 'vue';
 
 /** Nombre de la clase CSS asignada al elemento span de la onda */
-const RIPPLE_ELEMENT_CLASS_NAME = 'ripple';
+const RIPPLE_ELEMENT_CLASS_NAME = 'kaax-ripple';
 
 /** Divisor utilizado para calcular el radio del círculo */
 const DIAMETER_TO_RADIUS_DIVISOR = 2;

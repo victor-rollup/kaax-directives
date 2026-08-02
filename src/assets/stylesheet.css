@@ -1,0 +1,15 @@
+.kaax-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgb(255 255 255 / 0.45); /* Ajusta el color/opacidad */
+  transform: scale(0);
+  animation: kaax-ripple-effect 600ms linear;
+  pointer-events: none; /* Evita interferir con otros eventos */
+}
+
+@keyframes kaax-ripple-effect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

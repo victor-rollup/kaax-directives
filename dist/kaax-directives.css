@@ -1,0 +1,2 @@
+.kaax-ripple{pointer-events:none;background-color:#ffffff73;border-radius:50%;animation:.6s linear kaax-ripple-effect;position:absolute;transform:scale(0)}@keyframes kaax-ripple-effect{to{opacity:0;transform:scale(4)}}
+/*$vite$:1*/

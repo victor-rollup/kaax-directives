@@ -1,3 +1,4 @@
+import('./assets/stylesheet.css');
 export { vClickOutside } from './directives/click-outside.directive';
 export { vLazyLoad } from './directives/lazy-load.directive';
 export { vRipple } from './directives/ripple.directive';

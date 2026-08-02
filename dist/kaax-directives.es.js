@@ -25,7 +25,7 @@ var e = {
 	unmounted(e) {
 		e.__imageObserver__ && (e.__imageObserver__.disconnect(), delete e.__imageObserver__);
 	}
-}, n = "ripple", r = 2, i = {
+}, n = "kaax-ripple", r = 2, i = {
 	mounted(e, t) {
 		if (!(t.value ?? !0)) return;
 		e.style.position = "relative", e.style.overflow = "hidden";
@@ -98,5 +98,8 @@ var c = {
 		e.__copyHandler__ && (e.removeEventListener("click", e.__copyHandler__), delete e.__copyHandler__);
 	}
 };
+//#endregion
+//#region src/index.ts
+Promise.resolve({               });
 //#endregion
 export { e as vClickOutside, l as vCopy, t as vLazyLoad, i as vRipple, c as vTooltip };

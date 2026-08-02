@@ -81,6 +81,22 @@ var c = {
 	unmounted(e) {
 		e.__mouseleaveHandler__ && e.__mouseleaveHandler__(), e.__mouseenterHandler__ && (e.removeEventListener("mouseenter", e.__mouseenterHandler__), delete e.__mouseenterHandler__), e.__mouseleaveHandler__ && (e.removeEventListener("mouseleave", e.__mouseleaveHandler__), delete e.__mouseleaveHandler__);
 	}
+}, l = {
+	mounted(e, t) {
+		function n() {
+			let e = t.value;
+			e && navigator.clipboard.writeText(e).catch((e) => {
+				console.error("Error al copiar el texto al portapapeles:", e);
+			});
+		}
+		e.__copyHandler__ = n, e.addEventListener("click", n);
+	},
+	updated(e, t) {
+		t.oldValue;
+	},
+	unmounted(e) {
+		e.__copyHandler__ && (e.removeEventListener("click", e.__copyHandler__), delete e.__copyHandler__);
+	}
 };
 //#endregion
-export { e as vClickOutside, t as vLazyLoad, i as vRipple, c as vTooltip };
+export { e as vClickOutside, l as vCopy, t as vLazyLoad, i as vRipple, c as vTooltip };
